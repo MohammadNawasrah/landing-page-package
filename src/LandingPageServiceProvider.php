@@ -16,5 +16,13 @@ class LandingPageServiceProvider extends ServiceProvider
         // Publish migrations
         $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
         $this->loadRoutesFrom(__DIR__ . '/routes/web.php');
+
+        // Publish views to the Laravel app's resources/views
+        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'landing-page-package');
+
+        // Optionally, allow the views to be published
+        $this->publishes([
+            __DIR__ . '/../resources/views' => resource_path('views/vendor/landing-page-package'),
+        ], 'views');
     }
 }

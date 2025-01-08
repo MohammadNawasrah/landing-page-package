@@ -9,6 +9,6 @@ class LandingPageController extends MasterController
 {
     public function index()
     {
-        return response()->json(['message' => 'Welcome to the Landing Page Package']);
+        return view('landing-page-package::landing-page', ['message' => 'Welcome to the Landing Page Package']);
     }
 }
