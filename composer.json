@@ -1,0 +1,16 @@
+{
+    "name": "mnawasrah/landing-page-package",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Mnawasrah\\LandingPagePackage\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "MohammadNawasrah",
+            "email": "nawasrahmohammad2000@gmail.com"
+        }
+    ],
+    "require": {}
+}
