@@ -6,6 +6,13 @@
             "Mnawasrah\\LandingPagePackage\\": "src/"
         }
     },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Mnawasrah\\LandingPagePackage\\LandingPageServiceProvider"
+            ]
+        }
+    },
     "authors": [
         {
             "name": "MohammadNawasrah",
