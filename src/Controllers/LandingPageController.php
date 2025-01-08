@@ -9,6 +9,8 @@ class LandingPageController extends MasterController
 {
     public function index()
     {
-        return view('landing-page-package::landing-page', ['message' => 'Welcome to the Landing Page Package']);
+        // Get the user type from the config file
+        $userType = config('landing-page.user_type');
+        return view('landing-page-package::landing-page', ['message' => $userType]);
     }
 }

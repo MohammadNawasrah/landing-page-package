@@ -24,5 +24,10 @@ class LandingPageServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__ . '/../resources/views' => resource_path('views/vendor/landing-page-package'),
         ], 'views');
+
+         // Publish the config file
+        $this->publishes([
+            __DIR__ . '/../config/landing-page.php' => config_path('landing-page.php'),
+        ], 'config');
     }
 }
