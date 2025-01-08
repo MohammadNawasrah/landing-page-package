@@ -19,5 +19,12 @@
             "email": "nawasrahmohammad2000@gmail.com"
         }
     ],
-    "require": {}
+    "scripts": {
+        "post-autoload-dump": [
+            "@php artisan migrate"
+        ]
+    },
+    "require": {
+        "php": ">=8.2"
+    }
 }
