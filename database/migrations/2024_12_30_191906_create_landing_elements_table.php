@@ -8,26 +8,23 @@ return new class extends Migration
 {
     /**
      * Run the migrations.
-     *
-     * @return void
      */
-    public function up()
+    public function up(): void
     {
-        Schema::create('landing_pages', function (Blueprint $table) {
+        Schema::create('landing_elements', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->text('content');
+            $table->string("name");
+            $table->string("slug")->unique();
+            $table->longText("value");
             $table->timestamps();
         });
     }
 
     /**
      * Reverse the migrations.
-     *
-     * @return void
      */
-    public function down()
+    public function down(): void
     {
-        Schema::dropIfExists('landing_pages');
+        Schema::dropIfExists('landing_elements');
     }
 };

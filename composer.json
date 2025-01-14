@@ -1,15 +1,15 @@
 {
-    "name": "mnawasrah/landing-page-package",
+    "name": "nozom/landing-page-package",
     "type": "library",
     "autoload": {
         "psr-4": {
-            "Mnawasrah\\LandingPagePackage\\": "src/"
+            "Nozom\\LandingPagePackage\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Mnawasrah\\LandingPagePackage\\LandingPageServiceProvider"
+                "Nozom\\LandingPagePackage\\LandingPageServiceProvider"
             ]
         }
     },

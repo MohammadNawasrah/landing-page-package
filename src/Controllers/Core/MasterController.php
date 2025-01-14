@@ -1,6 +1,6 @@
 <?php
 
-namespace Mnawasrah\LandingPagePackage\Controllers\Core;
+namespace Nozom\LandingPagePackage\Controllers\Core;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Facades\View;
 use Illuminate\Http\Request;
