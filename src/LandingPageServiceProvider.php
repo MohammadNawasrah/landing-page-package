@@ -27,7 +27,7 @@ class LandingPageServiceProvider extends ServiceProvider
         ], 'config');
 
         $this->publishes([
-            __DIR__ . '/../public' => public_path('vendor/landing-page-package'),
+            __DIR__ . '/../public' => public_path('assets/vendor/landing-page-package'),
         ], 'public');
     }
 }
