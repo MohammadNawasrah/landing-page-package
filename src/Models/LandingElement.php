@@ -30,13 +30,13 @@ class LandingElement extends Model
 
         $element = LandingElement::where('slug', $slug)->first();
 
-        if(!$element) return "";
+        if(!isset($elements->$slug)) return $element->value ?? "";
 
 
-        if ($element->type === 'Html') {
-            echo __($element->value ?? "");
+        if ($element->type === HTML) {
+            echo __($elements->$slug ?? "");
         } else {
-            return __($element->value ?? "");
+            return __($elements->$slug ?? "");
         }
     }
     public function  getElementByType($type = null)

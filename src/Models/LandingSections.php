@@ -34,18 +34,15 @@ class LandingSections extends Model
             $elements =json_decode($this->hasMany(SectionElement::class,"fk_section_id","id")->pluck("value" , "slug")->toJson());
         }
         $slug = $this->id."-".$slug;
-    
-        if(!isset($elements->$slug) || empty($elements->$slug)){
-            $elements = json_decode($this->hasMany(SectionElement::class,"fk_section_id","id")->pluck("value" , "slug")->toJson());
-        }
+
         $element = SectionElement::where('slug', $slug)->first();
 
-        if(!$element) return "";
+        if(!isset($elements->$slug)) return $element->value ?? "";
         
         if ($element->type === HTML) {
-            echo __($element->value ?? "");
+            echo __($elements->$slug ?? "");
         } else {
-            return __($element->value ?? "");
+            return __($elements->$slug ?? "");
         }
     }
 
