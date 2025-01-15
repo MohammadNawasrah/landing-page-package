@@ -37,7 +37,7 @@ class LandingSections extends Model
 
         $element = SectionElement::where('slug', $slug)->first();
 
-        if(!isset($elements->$slug)) return $element->value ?? "";
+        if(!isset($elements->$slug) || $elements->$slug == "" || empty(trim($elements->$slug))  ) return $element->value ?? "";
         
         if ($element->type === HTML) {
             echo __($elements->$slug ?? "");
